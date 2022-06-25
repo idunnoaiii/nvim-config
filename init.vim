@@ -36,6 +36,7 @@ Plug 'yuezk/vim-js'
 Plug 'MaxMellon/vim-jsx-pretty'
 
 Plug 'OmniSharp/omnisharp-vim'
+" Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 call plug#end()
 
@@ -164,4 +165,27 @@ nnoremap <silent><leader>o :Files<CR>
 " Open list of buffers (window open)
 nnoremap <silent><leader>b :Buffers<CR>
 
+nnoremap <silent><leader>g :Rg<CR>
+
 inoremap jk <ESC>
+
+nmap <C-j> <down>
+nmap <C-k> <up>
+
+:let g:NERDTreeWinSize=40
+" TAB in general mode will move to text buffer
+nnoremap <TAB> :bn<CR>
+" SHIFT-TAB will go back
+nnoremap <S-TAB> :bp<CR>
+
+
+" format code in block
+noremap <silent> <leader>a =ip
+
+" close buffer. Consider to active this due to it will close buffer 
+nnoremap <silent><leader>q :bd<cr>
+
+" Open list of Files History
+nnoremap <silent><leader>i :History<CR>
+" Open list of Commands History
+nnoremap <silent><leader>y :History:<CR>
